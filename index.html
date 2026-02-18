@@ -63,9 +63,20 @@
     footer { background: #080808; text-align: center; padding: 28px; border-top: 1px solid rgba(201,168,76,0.15); font-size: 0.8rem; color: rgba(250,246,239,0.35); }
     footer span { color: var(--or); }
 
+    .lieux-section { margin-top: 70px; }
+    .lieux-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; max-width: 1100px; margin: 0 auto; }
+    .lieu-card { border: 1px solid rgba(201,168,76,0.2); padding: 32px; transition: border-color 0.3s; }
+    .lieu-card:hover { border-color: var(--or); }
+    .lieu-card h4 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--or); margin-bottom: 8px; }
+    .lieu-adresse { font-size: 0.9rem; color: rgba(250,246,239,0.55); line-height: 1.6; margin-bottom: 20px; }
+    .lieu-horaires { margin-bottom: 24px; }
+    .lieu-horaires p { font-size: 0.95rem; color: rgba(250,246,239,0.75); line-height: 1.9; }
+    .lieu-horaires strong { color: var(--or); font-weight: 700; }
+    .lieu-map { width: 100%; height: 220px; border: 1px solid rgba(201,168,76,0.15); margin-top: 4px; }
+
     @media (max-width: 768px) {
       nav { padding: 16px 24px; } .nav-links { display: none; } section { padding: 60px 24px; }
-      .apropos-grid, .cours-grid, .profs-grid { grid-template-columns: 1fr; }
+      .apropos-grid, .cours-grid, .profs-grid, .lieux-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -75,6 +86,7 @@
     <div class="nav-links">
       <a href="#apropos">À propos</a>
       <a href="#cours">Cours</a>
+      <a href="#cours" onclick="document.querySelector('.lieux-section').scrollIntoView({behavior:'smooth'});return false;">Lieux & Horaires</a>
       <a href="#professeurs">Professeurs</a>
       <a href="#contact">Contact</a>
     </div>
@@ -126,6 +138,31 @@
           <p>La valse argentine apporte fluidité, rotation et musicalité. Elle invite à la légèreté et à l'élégance, avec les codes propres au tango argentin.</p>
         </div>
       </div>
+      <div class="lieux-section">
+        <p class="section-label">Horaires & Lieux</p>
+        <h3 class="section-title">Où nous trouver</h3>
+        <div class="divider"></div>
+        <div class="lieux-grid">
+          <div class="lieu-card">
+            <h4>Salle des Augustins</h4>
+            <p class="lieu-adresse">Salle municipale des Augustins (3<sup>e</sup> étage)<br>6 boulevard du Jeu de Ballon, Grasse</p>
+            <div class="lieu-horaires">
+              <p><strong>Jeudi 19h15 – 20h30</strong> · Cours fondamentaux</p>
+              <p><strong>Jeudi 20h30 – 22h00</strong> · Pratique tous niveaux</p>
+            </div>
+            <iframe class="lieu-map" src="https://www.google.com/maps?q=6+boulevard+du+Jeu+de+Ballon,+Grasse,+France&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte – Salle des Augustins, Grasse"></iframe>
+          </div>
+          <div class="lieu-card">
+            <h4>Danse District</h4>
+            <p class="lieu-adresse">École de danse Danse District<br>Zone Commerciale de la Paoute – 34 traverse de la Paoute<br>(derrière Besson Chaussures) – 06130 Grasse</p>
+            <div class="lieu-horaires">
+              <p><strong>Mardi 19h15 – 20h30</strong> · Cours intermédiaires</p>
+              <p><strong>Mardi 20h30 – 22h00</strong> · Cours avancés</p>
+            </div>
+            <iframe class="lieu-map" src="https://www.google.com/maps?q=Danse+District,+34+traverse+de+la+Paoute,+06130+Grasse,+France&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte – Danse District, Grasse"></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -156,11 +193,11 @@
       <p class="section-label">Rejoignez-nous</p>
       <h2 class="section-title">Venez danser avec nous</h2>
       <div class="divider" style="margin:0 auto 20px;"></div>
-      <p style="color:rgba(250,246,239,0.6);line-height:1.8;">Les cours ont lieu à Grasse. Contactez-nous pour connaître les horaires, tarifs et pour vous inscrire. Débutants bienvenus !</p>
+      <p style="color:rgba(250,246,239,0.6);line-height:1.8;">Contactez-nous pour connaître les tarifs et pour vous inscrire. Débutants bienvenus !</p>
       <div class="contact-info">
-        <div class="contact-item"><p class="label">Lieu</p><p>Grasse, France</p></div>
         <div class="contact-item"><p class="label">Professeurs</p><p>Céline & Edouard</p></div>
         <div class="contact-item"><p class="label">Danses</p><p>Tango · Milonga · Valse Argentine</p></div>
+        <div class="contact-item"><p class="label">Cours</p><p>Mardi & Jeudi soir</p></div>
       </div>
       <a href="mailto:celine79.baquet@yahoo.com" class="btn">Nous écrire</a>
       <a href="https://www.facebook.com/p/Edouard-et-C%C3%A9line-Tango-100069158237376/" class="btn btn-outline" target="_blank" rel="noopener">Facebook</a>
