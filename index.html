@@ -48,13 +48,10 @@
     .cours-card p { font-size: 0.95rem; line-height: 1.8; color: rgba(250,246,239,0.65); }
 
     #professeurs { background: var(--creme); color: var(--noir); }
-    .profs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 900px; margin: 0 auto; }
-    .prof-card { text-align: center; padding: 48px 32px; border: 1px solid rgba(139,26,26,0.15); transition: box-shadow 0.3s; }
-    .prof-card:hover { box-shadow: 0 8px 30px rgba(139,26,26,0.12); }
-    .prof-avatar { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--rouge), #3a0a0a); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--or); margin: 0 auto 20px; }
-    .prof-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 8px; }
-    .prof-role { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); margin-bottom: 16px; }
-    .prof-card p { font-size: 0.95rem; line-height: 1.8; color: var(--gris); }
+    .prof-duo { max-width: 800px; margin: 0 auto; text-align: center; }
+    .prof-duo h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 8px; color: var(--noir); }
+    .prof-duo .prof-role { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); margin-bottom: 28px; }
+    .prof-duo p { font-size: 1.05rem; line-height: 1.9; color: var(--gris); margin-bottom: 16px; text-align: left; }
 
     #contact { background: var(--noir); text-align: center; }
     .contact-intro { max-width: 600px; margin: 0 auto 40px; }
@@ -85,7 +82,7 @@
 
     @media (max-width: 768px) {
       nav { padding: 16px 24px; } .nav-links { display: none; } section { padding: 60px 24px; }
-      .apropos-grid, .cours-grid, .profs-grid, .lieux-grid { grid-template-columns: 1fr; }
+      .apropos-grid, .cours-grid, .lieux-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -155,19 +152,12 @@
       <h2 class="section-title" style="color:var(--noir)">Vos enseignants</h2>
       <div class="divider" style="margin:0 auto;background:#8B1A1A;"></div>
     </div>
-    <div class="profs-grid">
-      <div class="prof-card">
-        <div class="prof-avatar">CB</div>
-        <h3>Céline Bacquet</h3>
-        <p class="prof-role">Professeure & Co-fondatrice</p>
-        <p>Passionnée de tango argentin, Céline transmet avec douceur et précision les subtilités de cette danse. Elle accompagne chaque élève avec patience et enthousiasme.</p>
-      </div>
-      <div class="prof-card">
-        <div class="prof-avatar">EP</div>
-        <h3>Edouard Pacaud</h3>
-        <p class="prof-role">Professeur & Co-fondateur</p>
-        <p>Danseur expérimenté, Edouard apporte une vision complète du tango, de la milonga et de la valse argentine. Son enseignement allie rigueur et plaisir de la danse.</p>
-      </div>
+    <div class="prof-duo">
+      <h3>Céline Baquet & Edouard Pacaud</h3>
+      <p class="prof-role">Un couple de danseurs, une même passion</p>
+      <p>Formés à Paris puis à Buenos Aires, où ils ont arpenté les milongas mythiques du Sin Rumbo et du Sunderland, Céline et Edouard partagent un tango de bal sobre, élégant et vécu. De retour en France, ils ont enseigné à Nantes, La Rochelle, Cholet, Vannes, Angers et Laval avant de poser leurs valises à Grasse.</p>
+      <p>Leur pédagogie met l'accent sur ce qui fait la richesse du tango : la connexion dans le couple, la musicalité, l'élégance et surtout la dimension sociale de la danse. Chez Flor de Tango, on apprend autant sur la piste que dans les moments de partage autour d'elle !</p>
+      <p>Leur mission : transmettre la passion du tango argentin, faire vivre sa culture et organiser des moments festifs pour réunir les danseurs de tous niveaux.</p>
     </div>
   </section>
 
